@@ -108,4 +108,207 @@ public class CalculadoraTest {
 	public void testComparaNumerosIguais() {
 		assertEquals(0, calc.compara(5, 5));
 	}
+
+
+    // ============================================================
+    // Testes adicionais gerados pelo ChatGPT na atividade 2
+    // ============================================================
+
+    // Testa soma com números negativos
+    @Test
+    public void testSomaComNumerosNegativos() {
+        assertEquals(-9, calc.soma(-4, -5));
+    }
+
+    // Testa soma de número positivo com número negativo
+    @Test
+    public void testSomaComNumeroPositivoENegativo() {
+        assertEquals(5, calc.soma(10, -5));
+    }
+
+    // Testa soma com zero
+    @Test
+    public void testSomaComZero() {
+        assertEquals(10, calc.soma(10, 0));
+    }
+
+    // Testa soma com Integer.MAX_VALUE e zero
+    @Test
+    public void testSomaComValorMaximo() {
+        assertEquals(Integer.MAX_VALUE, calc.soma(Integer.MAX_VALUE, 0));
+    }
+
+    // Testa subtração com resultado negativo
+    @Test
+    public void testSubtracaoComResultadoNegativo() {
+        assertEquals(-5, calc.subtracao(4, 9));
+    }
+
+    // Testa subtração de números negativos
+    @Test
+    public void testSubtracaoComNumerosNegativos() {
+        assertEquals(1, calc.subtracao(-4, -5));
+    }
+
+    // Testa subtração por zero
+    @Test
+    public void testSubtracaoPorZero() {
+        assertEquals(10, calc.subtracao(10, 0));
+    }
+
+    // Testa subtração de zero por um número
+    @Test
+    public void testSubtracaoDeZero() {
+        assertEquals(-10, calc.subtracao(0, 10));
+    }
+
+    // Testa multiplicação com números negativos
+    @Test
+    public void testMultiplicacaoComNumerosNegativos() {
+        assertEquals(20, calc.multiplicacao(-4, -5));
+    }
+
+    // Testa multiplicação de número positivo por negativo
+    @Test
+    public void testMultiplicacaoPositivoPorNegativo() {
+        assertEquals(-20, calc.multiplicacao(4, -5));
+    }
+
+    // Testa multiplicação por 1
+    @Test
+    public void testMultiplicacaoPorUm() {
+        assertEquals(10, calc.multiplicacao(10, 1));
+    }
+
+    // Testa multiplicação de zero por zero
+    @Test
+    public void testMultiplicacaoZeroPorZero() {
+        assertEquals(0, calc.multiplicacao(0, 0));
+    }
+
+    // Testa divisão com números negativos
+    @Test
+    public void testDivisaoComNumerosNegativos() {
+        assertEquals(2, calc.divisao(-8, -4));
+    }
+
+    // Testa divisão de número positivo por negativo
+    @Test
+    public void testDivisaoPositivoPorNegativo() {
+        assertEquals(-2, calc.divisao(8, -4));
+    }
+
+    // Testa divisão de zero por um número
+    @Test
+    public void testDivisaoDeZero() {
+        assertEquals(0, calc.divisao(0, 5));
+    }
+
+    // Testa divisão com resultado inteiro truncado
+    @Test
+    public void testDivisaoComResultadoTruncado() {
+        assertEquals(2, calc.divisao(5, 2));
+    }
+
+    // Testa divisão de um número por ele mesmo
+    @Test
+    public void testDivisaoDoNumeroPorEleMesmo() {
+        assertEquals(1, calc.divisao(7, 7));
+    }
+
+    // Testa somatória de zero
+    @Test
+    public void testSomatoriaDeZero() {
+        assertEquals(0, calc.somatoria(0));
+    }
+
+    // Testa somatória de um
+    @Test
+    public void testSomatoriaDeUm() {
+        assertEquals(1, calc.somatoria(1));
+    }
+
+    // Testa somatória de um número maior
+    @Test
+    public void testSomatoriaDeDez() {
+        assertEquals(55, calc.somatoria(10));
+    }
+
+    // Testa somatória com número negativo.
+    // Pela implementação atual, o while não é executado.
+    @Test
+    public void testSomatoriaComNumeroNegativo() {
+        assertEquals(0, calc.somatoria(-5));
+    }
+
+    // Testa se zero é considerado positivo pela implementação atual
+    @Test
+    public void testEhPositivoComZero() {
+        assertTrue(calc.ehPositivo(0));
+    }
+
+    // Testa número positivo maior
+    @Test
+    public void testEhPositivoComNumeroPositivoMaior() {
+        assertTrue(calc.ehPositivo(100));
+    }
+
+    // Testa número negativo menor
+    @Test
+    public void testEhPositivoComNumeroNegativoMaior() {
+        Assertions.assertFalse(calc.ehPositivo(-100));
+    }
+
+    // Testa comparação quando o primeiro número é maior
+    @Test
+    public void testComparaQuandoPrimeiroNumeroEMaior() {
+        assertEquals(1, calc.compara(10, 5));
+    }
+
+    // Testa comparação quando o primeiro número é menor
+    @Test
+    public void testComparaQuandoPrimeiroNumeroEMenor() {
+        assertEquals(-1, calc.compara(5, 10));
+    }
+
+    // Testa comparação entre números negativos iguais
+    @Test
+    public void testComparaNumerosNegativosIguais() {
+        assertEquals(0, calc.compara(-5, -5));
+    }
+
+    // Testa comparação entre números negativos quando o primeiro é maior
+    @Test
+    public void testComparaNumerosNegativosPrimeiroMaior() {
+        assertEquals(1, calc.compara(-3, -5));
+    }
+
+    // Testa comparação entre números negativos quando o primeiro é menor
+    @Test
+    public void testComparaNumerosNegativosPrimeiroMenor() {
+        assertEquals(-1, calc.compara(-5, -3));
+    }
+
+    // Testa comparação envolvendo zero
+    @Test
+    public void testComparaZeroComNumeroPositivo() {
+        assertEquals(-1, calc.compara(0, 5));
+    }
+
+    // Testa comparação envolvendo zero
+    @Test
+    public void testComparaNumeroPositivoComZero() {
+        assertEquals(1, calc.compara(5, 0));
+    }
+
+    // Testa comparação entre Integer.MAX_VALUE e Integer.MIN_VALUE
+    @Test
+    public void testComparaValoresExtremos() {
+        assertEquals(1, calc.compara(Integer.MAX_VALUE, Integer.MIN_VALUE));
+    }
+
+
+
+
+
 }
