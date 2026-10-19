@@ -1,0 +1,18 @@
+# Classes compiladas (geradas pelos comandos do README)
+out/
+
+# Saída de compilação do Eclipse
+bin/
+
+# Bibliotecas baixadas (ver links no README)
+*.jar
+
+# Dados brutos do agente do JaCoCo
+*.exec
+
+# Editor / sistema
+.vscode/
+.idea/
+*.iml
+.DS_Store
+Thumbs.db

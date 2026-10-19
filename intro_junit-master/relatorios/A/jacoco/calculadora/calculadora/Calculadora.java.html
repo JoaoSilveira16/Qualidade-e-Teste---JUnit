@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Calculadora.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Calculadora - aluno</a> &gt; <a href="index.source.html" class="el_package">calculadora</a> &gt; <span class="el_source">Calculadora.java</span></div><h1>Calculadora.java</h1><pre class="source lang-java linenums">package calculadora;
+
+<span class="fc" id="L3">public class Calculadora {</span>
+	
+
+	
+	/**
+	 * Este método soma dois inteiros e retorna o resultado
+	 * 
+	 * @param a
+	 * 	 Primeiro valor a ser adicionado
+	 * @param b
+	 * 	Segundo valor a ser adicionado
+	 * @return O valor retornado é a soma dos dois números
+	 */
+	public int soma (int a, int b) {
+<span class="fc" id="L17">		return a + b;</span>
+	}
+	
+	/**
+	 * Este método subtrai dois inteiros e retorna o resultado
+	 * 
+	 * @param a
+	 * 	 Primeiro valor a ser subtraído
+	 * @param b
+	 * 	Segundo valor a ser subtraído
+	 * @return O valor retornado é a subtração dos dois números
+	 */	
+	public int subtracao(int a, int b) {
+<span class="fc" id="L30">		return a - b;</span>
+	}
+	
+	/**
+	 * Este método multiplica dois inteiros e retorna o resultado
+	 * 
+	 * @param a
+	 * @param b
+	 * @return 
+	 */		
+	public int multiplicacao(int a, int b) {
+<span class="fc" id="L41">		return a * b;</span>
+	}
+	
+	/**
+	 * Este método divide dois inteiros e retorna o resultado
+	 * 
+	 * @param a
+	 * @param b
+	 * @return 
+	 * */	
+	public int divisao(int a, int b) {
+<span class="fc" id="L52">		return a / b;</span>
+	}	
+
+	/**
+	 * Este método retorna o somatório 0 até n
+	 * 
+	 * @param n	  		
+	 * @return O retorno será o somatório de 0 até n
+	 */
+	public int somatoria(int n) {
+<span class="fc" id="L62">		int somatorio = 0;</span>
+<span class="fc bfc" id="L63" title="All 2 branches covered.">		while (n &gt;= 0) {</span>
+<span class="fc" id="L64">			somatorio += n;</span>
+<span class="fc" id="L65">			n--;</span>
+		}
+<span class="fc" id="L67">		return somatorio;</span>
+	}
+	
+	
+	/**
+	 * Este retorna se um inteiro n é positivo
+	 * 
+	 * @param n	 
+	 * @return
+	 */	
+	public boolean ehPositivo(int n) {
+<span class="fc bfc" id="L78" title="All 2 branches covered.">		return n &gt;= 0;</span>
+	}
+	
+	/**
+	 * Esse método compara dois número a e b
+	 * @param a
+	 * @param b
+	 * @return 0 se a==b, 1 se a&gt;b, -1 se a &lt; b
+	 */
+	public int compara(int a, int b) {
+<span class="fc" id="L88">		int retorno = 0;</span>
+<span class="pc bpc" id="L89" title="1 of 2 branches missed.">		if (a==b) {</span>
+<span class="fc" id="L90">			retorno = 0;			</span>
+<span class="nc bnc" id="L91" title="All 2 branches missed.">		} else if (a &gt; b) {</span>
+<span class="nc" id="L92">			retorno = 1;</span>
+		} else {
+<span class="nc" id="L94">			retorno = -1;</span>
+		}
+<span class="fc" id="L96">		return retorno;		</span>
+	}
+	
+	
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
